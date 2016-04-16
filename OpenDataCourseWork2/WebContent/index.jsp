@@ -8,6 +8,5 @@
 </head>
 <body>
 <a href="HistoryResultServlet?clubName=Southampton">Southampton</a>
-<a href="HistoryResultServlet?clubName=Arsenal">Arsenal</a>
 </body>
 </html>
