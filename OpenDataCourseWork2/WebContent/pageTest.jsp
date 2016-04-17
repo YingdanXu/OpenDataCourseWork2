@@ -29,7 +29,7 @@
     The when condition does not display a link for the current page--%>
     <table border="1" cellpadding="5" cellspacing="5">
         <tr>
-            <c:forEach begin="1" end="9" var="i">
+            <c:forEach begin="1" end="10" var="i">
                 <c:choose>
                     <c:when test="${currentPage eq i}">
                         <td>${i}</td>
@@ -42,11 +42,11 @@
         </tr>
     </table>
      <%--For displaying Previous link except for the 1st page --%>
-    <c:if test="${currentPage != 1}">
+    <c:if test="${currentPage >= 1}">
         <td><a href="MatchResultServlet?page=${currentPage - 1}&clubName=${currentTeam}">Previous</a></td>
     </c:if>
     <%--For displaying Next link --%>
-    <c:if test="${currentPage lt noOfPages}">
+    <c:if test="true">
         <td><a href="MatchResultServlet?page=${currentPage + 1}&clubName=${currentTeam}">Next</a></td>
     </c:if>
 </body>
